@@ -23,7 +23,7 @@ void loadbalancer::addRequest(request r)
   
 request loadbalancer::getRequest()
 {
-   request r = requestQueue.front();
+   request r = requestQueue.top();
    requestQueue.pop();
    incTime();
    return r;
