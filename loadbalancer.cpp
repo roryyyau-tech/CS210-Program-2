@@ -18,12 +18,14 @@ void loadbalancer::incTime()
 void loadbalancer::addRequest(request r)
 {
    requestQueue.push(r);
+   incTime();
 }
   
 request loadbalancer::getRequest()
 {
    request r = requestQueue.front();
    requestQueue.pop();
+   incTime();
    return r;
 }
 
