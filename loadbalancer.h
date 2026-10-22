@@ -6,6 +6,7 @@
 #include "request.h"
 #include <queue>     // STL for queue and priority_queue
 #include <stack>     // STL for stack
+#include <vector>
 
 class loadbalancer
 {
@@ -23,10 +24,10 @@ class loadbalancer
    private:
       int systemTime;
       // queue<request> requestQueue;
-      //priority_queue<request, vector<request>, MaxProcessTime> requestQueue;
+      priority_queue<request, vector<request>, MaxProcessTime> requestQueue;
       //priority_queue<request, vector<request>, MinProcessTime> requestQueue;
       //priority_queue<request, vector<request>, MaxPID> requestQueue;
-      stack<request> requestQueue;
+      // stack<request> requestQueue;
 };
 
 #endif
